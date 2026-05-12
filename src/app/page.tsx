@@ -299,7 +299,6 @@ export default function Home() {
                   playsInline
                   preload="auto"
                   poster={loc.poster}
-                  // @ts-expect-error webkit vendor attribute for iOS
                   webkit-playsinline="true"
                   className="w-full h-full object-cover"
                 >
