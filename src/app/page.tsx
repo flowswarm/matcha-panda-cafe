@@ -17,6 +17,7 @@ export default function Home() {
       address: "202 N 9th St, Philadelphia, PA 19107",
       hours: "Mon-Thu/Sun: 12PM-10PM · Fri: 12PM-10:30PM · Sat: 12PM-11PM",
       video: "/chinatown.mp4",
+      poster: "/chinatown-poster.jpg",
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.5!2d-75.155!3d39.957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c884f5e0c0e1%3A0xmatcha1!2sMatcha+Panda+Cafe!5e0!3m2!1sen!2sus!4v1",
       directions: "https://www.google.com/maps/dir/?api=1&destination=202+N+9th+St+Philadelphia+PA+19107",
     },
@@ -26,6 +27,7 @@ export default function Home() {
       address: "2033 Chestnut St, Philadelphia, PA 19103",
       hours: "Mon-Thu: 11AM-9PM · Fri: 11AM-9:30PM · Sat: 10AM-9PM",
       video: "/rittenhouse.mp4",
+      poster: "/rittenhouse-poster.jpg",
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.8!2d-75.178!3d39.952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c64d17ca1c5f%3A0xmatcha2!2sMatcha+Panda+Cafe+Rittenhouse!5e0!3m2!1sen!2sus!4v1",
       directions: "https://www.google.com/maps/dir/?api=1&destination=2033+Chestnut+St+Philadelphia+PA+19103",
     },
@@ -295,6 +297,10 @@ export default function Home() {
                   muted
                   loop
                   playsInline
+                  preload="auto"
+                  poster={loc.poster}
+                  // @ts-expect-error webkit vendor attribute for iOS
+                  webkit-playsinline="true"
                   className="w-full h-full object-cover"
                 >
                   <source src={loc.video} type="video/mp4" />
