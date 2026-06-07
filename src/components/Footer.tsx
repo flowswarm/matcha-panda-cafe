@@ -33,7 +33,7 @@ export default function Footer() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <footer className="sticky bottom-0 left-0 w-full bg-brand-green text-background z-0 flex flex-col justify-between pt-20 pb-8 px-4 md:px-8 min-h-screen relative overflow-hidden">
+    <footer className="w-full bg-brand-green text-background z-0 flex flex-col justify-between pt-20 pb-8 px-4 md:px-8 min-h-fit relative">
       {/* Background Video */}
       <video
         autoPlay
